@@ -1,0 +1,37 @@
+<html>
+<head>
+<script src='jquery-1.7.min.js'></script>
+<script>
+var shown = false;
+var tempSelection;
+var tempUrl;
+
+// accept requests from the content script and return whether or not the RetailDetail bar is displayed.
+      chrome.extension.onRequest.addListener(
+        function (req, sender, callback) {
+			if (req != null && req.type === "status") {
+				callback({"shownStatus": shown});
+			} else if (req != null && req.type === "select") {
+				tempSelection = req.selection;	
+				tempUrl = req.url;
+				callback({"selection":tempSelection});
+			}
+        }
+      );
+
+// show or hide the retail detail bar.
+ function toggleRetailDetailBar(tab) {
+	 shown = !shown;
+	// XXX Eventually do this in all tabs, not just the current one.
+	chrome.tabs.executeScript(null, {file: "content_script.js"});
+  }
+
+// set the action for when the user clicks the button for the browser action.
+chrome.browserAction.onClicked.addListener(toggleRetailDetailBar);
+
+// Make a context menu item - UNUSED
+// var parent = chrome.contextMenus.create({"title": "Add to RetailDetail"});
+
+</script>
+</head>
+<!---  Retail Detail --->

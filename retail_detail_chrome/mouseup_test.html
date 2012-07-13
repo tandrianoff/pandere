@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Javascript Mouseup Test</title>
+
+<script>
+
+document.body.addEventListener("onclick",
+function(e) {
+	var targ = e.target;
+	targ.value = "Hello!";
+});
+
+for (var i = document.getElementsByName("*");
+
+function doSomething() {
+	alert("You did something.");
+}
+
+function endDrag() {
+	alert("You dragged something.");
+};
+
+function doPaste() {
+ document.execCommand("paste");	
+}
+
+</script>
+
+</head>
+
+<body>
+
+<textarea  ></textarea>
+<input type="text" />
+<div style="background-color:#000; height:500px;" ondragend="endDrag();" onmouseup="doSomething();">
+</div>
+<img src="http://www.psdgraphics.com/wp-content/uploads/2009/07/push-button.jpg" onclick="doSomething();"/>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/300px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" />
+<p>
+Bacon ipsum dolor sit amet andouille fugiat tongue salami pork chop. Ullamco pork belly pork chop, drumstick incididunt laborum tongue sint andouille strip steak. Corned beef veniam sed mollit, fugiat cow strip steak adipisicing esse ground round leberkäse pig. Dolor aliquip occaecat pork loin hamburger, shankle turducken qui minim. Adipisicing sunt enim, rump sint salami brisket velit in labore. Ut jowl shankle beef, excepteur spare ribs rump sausage ea nostrud minim venison voluptate tongue bresaola. Kielbasa adipisicing pancetta pastrami reprehenderit, labore tempor shank pariatur sed.
+</p>
+</body>
+</html>
