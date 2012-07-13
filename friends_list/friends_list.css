@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+Facebook user pic in friend's list
+*/
+.friend_icon {
+	height:20px;
+	float:left;
+	padding:3px;
+}
+
+/* FB user pic on mousover friend card */
+.card_friend_icon {
+	float:left;
+	padding:5px;
+	border-width:5px;
+	border-color:transparent;
+}
+
+/* Styles for the actual friend's list */
+#rd_friends { 
+	list-style-type: none;
+	width: 300px;
+	border-style: solid;
+	border-width:medium;
+	border-color:#000;
+	display: inline;
+	float:left;
+}	
+
+/* style for a single friend listing */
+.friend_list_entry {
+	font-size:10px;
+	height: 30px;
+	width:300px;
+	font-family: Helvetica,Arial,sans-serif;
+	border-style:none none none none;
+	border-width:thin;
+	background-color:#666;
+	color:#FFF;	
+}
+
+/* IDK */
+.friend_list_entry div div {
+	display:inline;
+}
+
+/* Friend info popup card */
+.card {
+	width:300px; 
+	height:300px; 
+	border-width:thin; 
+	border-style:solid; 
+	border-color:#000;
+	background-color:#666;	
+	display: inline;
+	float:left;
+	font-family: Helvetica,Arial,sans-serif;
+	z-index:1000000;
+}
+
+/* Within friend_list_entry */
+.friend_name {
+	font-weight:bold; 
+	font-size:12px;	
+	color: #FFF;
+}
+
+/* Fake link to a workspace */
+.workspace{
+	color:#00F;
+	text-decoration:underline;	
+}
+
+/* Area where friend list entries can be dropped? */
+.friend_drop_zone {
+	position:fixed;
+	left:320px;
+	display:inline;
+	float:left;
+	width:500px;
+	height:1000px;
+	z-index:-10000000;
+	background-color:#888;	
+}
+
+/*  Change style of item while being dragged. 
+XXX: This will conflict with other things. BEWARE
+*/
+.ui-draggable-dragging {
+	background-color:#CC9;	
+}
